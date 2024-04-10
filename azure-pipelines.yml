@@ -15,8 +15,4 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
-- task: IISWebAppDeploymentOnMachineGroup@0
-  inputs:
-    WebSiteName: 'deploy app'
-    VirtualApplication: 'azure self hosted agent'
-    Package: '$(C:\vsts-agent-win-x64-3.236.1\_work\1\a )\**\*.zip'
+
