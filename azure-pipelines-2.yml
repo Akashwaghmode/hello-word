@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: azure self hosted agent
 
 steps:
 - task: ArchiveFiles@2
