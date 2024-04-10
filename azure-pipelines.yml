@@ -15,3 +15,8 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+- task: IISWebAppDeploymentOnMachineGroup@0
+  inputs:
+    WebSiteName: 'app deploy'
+    VirtualApplication: 'azure self hosted adent'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
