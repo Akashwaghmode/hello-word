@@ -19,4 +19,4 @@ steps:
   inputs:
     WebSiteName: 'my html'
     VirtualApplication: 'azure self hosted agent'
-    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+    Package: '$(System.vsts-agent-win-x64-3.236.1\_work\1\a)\**\*.zip'
