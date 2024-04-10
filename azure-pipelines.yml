@@ -17,6 +17,6 @@ steps:
 - task: PublishBuildArtifacts@1
 - task: IISWebAppDeploymentOnMachineGroup@0
   inputs:
-    WebSiteName: 'my html'
+    WebSiteName: 'my app'
     VirtualApplication: 'azure self hosted agent'
-    Package: '$(System.vsts-agent-win-x64-3.236.1\_work\1\a\59)\**\*.zip'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
