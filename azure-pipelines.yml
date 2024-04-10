@@ -18,6 +18,5 @@ steps:
 
 - task: IISWebAppDeploymentOnMachineGroup@0
   inputs:
-    WebSiteName: 'deploy website'
-    VirtualApplication: 'windows'
+    WebSiteName: 'mywebapp'
     Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
