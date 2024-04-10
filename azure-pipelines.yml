@@ -15,4 +15,8 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+- task: IISWebAppDeploymentOnMachineGroup@0
+  inputs:
+    WebSiteName: 'iis web'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
 
