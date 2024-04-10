@@ -15,9 +15,3 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
-- task: IISWebAppManagementOnMachineGroup@0
-  inputs:
-    IISDeploymentType: 'IISWebsite'
-    ActionIISWebsite: 'CreateOrUpdateWebsite'
-    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
-    WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
