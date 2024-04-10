@@ -27,4 +27,5 @@ steps:
     script: |
       $targetFolder = "C:\inetpub\wwwroot"  # Specify the target folder where you want to deploy your HTML files
       $artifactPath = "$(Build.ArtifactStagingDirectory)\index.html"
-      Copy- $ C:\vsts-agent-win-x64-3.236.1\_work\1  $/inetpub/wwwroot
+      Copy-Item C:\vsts-agent-win-x64-3.236.1\_work\1 $/inetpub/wwwroot
+
