@@ -15,3 +15,9 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'C:\vsts-agent-win-x64-3.236.1\_work\1\a'
+    Contents: '**'
+    TargetFolder: 'c/inethub/wwwroot'
