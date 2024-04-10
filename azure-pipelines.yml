@@ -15,8 +15,11 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
-- task: IISWebAppDeploymentOnMachineGroup@0
+- task: IISWebAppManagementOnMachineGroup@0
   inputs:
-    WebSiteName: 'my app'
-    VirtualApplication: 'azure self hosted agent'
-    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+    EnableIIS: true
+    IISDeploymentType: 'IISWebsite'
+    ActionIISWebsite: 'CreateOrUpdateWebsite'
+    WebsiteName: 'default website'
+    WebsitePhysicalPath: '%SystemDrive%\inetpub\wwwroot'
+    WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
