@@ -15,8 +15,8 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
-- task: IISWebAppDeploymentOnMachineGroup@0
+- task: PublishBuildArtifacts@1
   inputs:
-    WebSiteName: 'iis web'
-    VirtualApplication: 'azure self hosted zone'
-    Package: '$(\vsts-agent-win-x64-3.236.1\_work\1\a)\**\*.zip'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'c/inetpub/wwwroot'
