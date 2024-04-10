@@ -16,7 +16,3 @@ steps:
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
 
-- task: IISWebAppDeploymentOnMachineGroup@0
-  inputs:
-    WebSiteName: 'mywebapp'
-    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
